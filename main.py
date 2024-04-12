@@ -132,7 +132,7 @@ with torch.no_grad():
     Yte = {'Prediction' : prediction}
     dataframe = pd.DataFrame(Yte)
     dataframe.index += 1
-    dataframe.to_csv('Yte_pred_1.csv', index_label='Id')
+    dataframe.to_csv('Yte_pred.csv', index_label='Id')
     
     total.fit(X_train, y_train)
     prediction = total.predict(Xte).cpu().numpy()
